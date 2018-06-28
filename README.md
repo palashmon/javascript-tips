@@ -7,6 +7,7 @@ Useful JavaScript Tips &amp; Tricks
 ## Contents
 
 - [Console Table - Display tabular data as a table](#console-table).
+- [Console Log With Variable Name](#console-log-with-variable-name).
 
 <br>
 
@@ -37,6 +38,36 @@ and after that you will see something like this in your console:
 which now you can easily scroll and check for object key value that you have been looking for.
 
 MDN Web Docs: [Console.table()](https://developer.mozilla.org/en-US/docs/Web/API/Console/table)
+
+<br>
+
+## Console Log With Variable Name
+
+There might have been a situation where you `console.log` some variables in app like:
+
+```js
+console.log(id, name, completed, submitted);
+```
+
+and then check in console for results on page refresh and find something like:
+
+```
+23 "palash" true false
+```
+
+Now at first look you might have some confusion like "_Is `completed` true or false here?_" You just check the app/IDE again and confirm based on position of variables inside `console.log` that `completed` is actually true here and `submitted` variable is false. But you can just wrap the curly brackets `{}` around your `console.log` arguments to see the variable names along with the value in a easy comprehensible format, taking the advantage of ES6 shorthand syntax like:
+
+```js
+console.log({ id, name, completed, submitted });
+```
+
+and now in your browser console you will see something like:
+
+![img4](/assets/images/jstip4.png)
+
+Now you can easily say that `completed` is indeed `true` here.
+
+Reference: [Wes Bos's 2016 Tweet](https://twitter.com/wesbos/status/798579690575462400)
 
 ## Next Tip
 

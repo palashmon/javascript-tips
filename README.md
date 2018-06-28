@@ -1,6 +1,14 @@
-# javascript-tips
+# Javascript Tips
 
 Useful JavaScript Tips &amp; Tricks
+
+<br>
+
+## Contents
+
+- [Console Table - Display tabular data as a table](#console-table).
+
+<br>
 
 ## Console Table
 
@@ -27,6 +35,8 @@ and after that you will see something like this in your console:
 ![img3](/assets/images/jstip3.png)
 
 which now you can easily scroll and check for object key value that you have been looking for.
+
+MDN Web Docs: [Console.table()](https://developer.mozilla.org/en-US/docs/Web/API/Console/table)
 
 ## Next Tip
 

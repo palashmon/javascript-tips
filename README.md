@@ -8,7 +8,7 @@ Useful JavaScript Tips &amp; Tricks
 
 - [Console Table - Display tabular data as a table](#console-table).
 - [Console Log With Variable Name](#console-log-with-variable-name).
-- [Short code to create array of `n` length from `0` to `n-1`](short-code-to-create-array).
+- [Short code to create array of `n` length from `0` to `n-1`](#short-code-to-create-array).
 
 <br>
 

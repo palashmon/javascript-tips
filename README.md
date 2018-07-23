@@ -8,6 +8,7 @@ Useful JavaScript Tips &amp; Tricks
 
 - [Console Table - Display tabular data as a table](#console-table).
 - [Console Log With Variable Name](#console-log-with-variable-name).
+- [Short code to create array of `n` length from `0` to `n-1`](short-code-to-create-array).
 
 <br>
 
@@ -68,6 +69,46 @@ and now in your browser console you will see something like:
 Now you can easily say that `completed` is indeed `true` here.
 
 Reference: [Wes Bos's 2016 Tweet](https://twitter.com/wesbos/status/798579690575462400)
+
+## Short Code To Create Array
+
+Sometimes we might need to create an array of `n` length like `[0, 1, 2, ..., n-1]`. We can do this easily using ES6 [Spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) like:
+
+```js
+[...Array(n).keys()];
+```
+
+This is a general version. If you need an array of length `10`, then you can set it like:
+
+```js
+[...Array(10).keys()];
+// Result => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+### Brief explanation
+
+1.  `Array(10)` create an empty array of length `10` like `[,,,...]` where value of any index from 0-9 is `undefined`.
+2.  `Array(10).keys()` this returns a new **Array Iterator** object that contains the keys for each index in the array.
+
+    ```js
+    var array1 = Array(3);
+    var iterator = array1.keys();
+
+    for (let key of iterator) {
+      console.log(key); // expected output: 0 1 2
+    }
+    ```
+
+3.  `[...Array(10).keys()]` this creates a new, shallow-copied `Array` instance from `Array(10).keys()` iterable object.
+
+### Bonus Trick
+
+If you want the array to start from `1` and end with `n` here like `[1, 2, 3, ..., n]` instead of `[0, 1, 2, ..., n-1]`, then you can do like this:
+
+```js
+[...Array(10)].map((v, i) => ++i);
+// Result => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
 
 ## Next Tip
 

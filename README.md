@@ -10,7 +10,7 @@ Useful JavaScript Tips &amp; Tricks
 - [Console Log With Variable Name](#console-log-with-variable-name).
 - [Short code to create array of `n` length from `0` to `n-1`](#short-code-to-create-array).
 - [Conditionally Spread Object](#conditionally-spread-object).
-- []().
+- [Conditionally adding properties inside Object](#Conditionally-adding-properties-inside-object).
 
 <br>
 
@@ -140,6 +140,41 @@ const shipping = {
 }
 
 // and we will not get any type error incase person object has not been set yet
+```
+
+## Conditionally adding properties inside Object
+
+We can return two different objects with or without certain property, based on a condition using the spread operator. 
+
+```js
+// A boolean `emailIncluded` determines whether the property `email` is added to the return object
+const getUser = (emailIncluded) => {
+  return {
+    name: 'Wes',
+    surname: 'Bos',
+    ...(emailIncluded && { email : 'wes@bos.com' })
+  }
+}
+
+// Get user details with email
+const user = getUser(true);
+console.log(user);
+// Returns:
+// {name: "Wes", surname: "Bos", email: "wes@bos.com"}
+
+// Get user details without email
+const userWithoutEmail = getUser(false);
+console.log(userWithoutEmail);
+// Returns:
+// {name: "Wes", surname: "Bos"}
+```
+
+The spread operator for object does nothing if its operand is an empty object 
+
+```js
+{a: 1, ...{}}
+// Returns:
+// {a: 1}
 ```
 
 ## Next Tip

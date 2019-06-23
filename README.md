@@ -9,6 +9,8 @@ Useful JavaScript Tips &amp; Tricks
 - [Console Table - Display tabular data as a table](#console-table).
 - [Console Log With Variable Name](#console-log-with-variable-name).
 - [Short code to create array of `n` length from `0` to `n-1`](#short-code-to-create-array).
+- [Conditionally Spread Object](#conditionally-spread-object).
+- []().
 
 <br>
 
@@ -108,6 +110,36 @@ If you want the array to start from `1` and end with `n` here like `[1, 2, 3, ..
 ```js
 [...Array(10)].map((v, i) => ++i);
 // Result => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+## Conditionally Spread Object
+
+We can conditionally spread an object - because `{...false}` (and undefined/null/etc) is just `{}`.
+
+```js
+let person;
+const defaultAddress = {
+    street: '4253  Rebecca Street',
+    city: 'Chicago',
+    state: 'Illinois',
+    country: 'US'
+}
+
+// In case, person object has not been set yet then person is `undefined`
+const shipping = {
+ 	...defaultAddress,
+	...person.address
+}
+// and the above code gives an error:
+// Uncaught TypeError: Cannot read property 'address' of undefined
+
+// We can conditionally spread the person object like:
+const shipping = {
+ 	...defaultAddress,
+	...(person && person.address)   // this will result in {...false} == {}
+}
+
+// and we will not get any type error incase person object has not been set yet
 ```
 
 ## Next Tip

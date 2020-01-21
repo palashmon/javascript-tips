@@ -11,6 +11,7 @@ Useful JavaScript Tips &amp; Tricks
 - [Short code to create array of `n` length from `0` to `n-1`](#short-code-to-create-array).
 - [Conditionally Spread Object](#conditionally-spread-object).
 - [Conditionally adding properties inside Object](#Conditionally-adding-properties-inside-object).
+- [Type Checking JavaScript Files](#Type-checking-javaScript-files)
 
 <br>
 
@@ -176,6 +177,19 @@ The spread operator for object does nothing if its operand is an empty object
 // Returns:
 // {a: 1}
 ```
+
+## Type Checking JavaScript Files
+
+Want TypeScript's type checking for regular JavaScript?
+
+Opt in via comment: // @ts-check  
+Via CLI: tsc file.js --allowJs --checkJs --noEmit  
+Via config: "checkJs": true  
+
+If types can't be inferred, use JSDoc annotations.
+Learn more: [Link](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html)  
+
+![img2](https://pbs.twimg.com/media/EN-6ARpUcAI41Md?format=jpg&name=small)  
 
 ## Next Tip
 

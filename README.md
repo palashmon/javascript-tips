@@ -219,6 +219,39 @@ async function trace(label, fn) {
 }
 ```
 
+# Check if an array with a length is not just empty slots
+
+We can determine if an array with a length is not just empty slots, using array `filter()` method. The `filter()` method creates a new array with all elements that pass the test implemented by the provided function.
+
+```js
+
+// Make an array with 4 empty slots
+Array(4)
+=> (4) [empty × 4]
+
+// Check this array length
+Array(4).length
+=> 4
+
+// But does all of the array slots have a valid value
+// 0 here means that all of the slots of this array are empty
+Array(4).filter(Boolean).length
+=> 0
+
+// To verify we can create an array with two empty slots and 2 valid slots
+Array(undefined, undefined, 3, 5)
+=> (4) [undefined, undefined, 3, 5]
+
+// Check this array length
+Array(undefined, undefined, 3, 5).length
+=> 4
+
+// But does all of the array slots have a valid value
+// 2 here means that only two slots have a valid value in this array
+Array(undefined, undefined, 3, 5).filter(Boolean).length
+=> 2
+```
+
 ## Next Tip
 
 Coming soon...

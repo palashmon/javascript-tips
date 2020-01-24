@@ -13,6 +13,7 @@ Useful JavaScript Tips &amp; Tricks
 - [Conditionally adding properties inside Object](#Conditionally-adding-properties-inside-object).
 - [Type Checking JavaScript Files](#Type-checking-javaScript-files)
 - [Easily trace execution time of Promises](#easily-trace-execution-time-of-promises)
+- [Check if an array with a length is not just empty slots](#check-if-an-array-with-a-length-is-not-just-empty-slots)
 
 <br>
 

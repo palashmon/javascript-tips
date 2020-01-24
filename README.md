@@ -191,6 +191,33 @@ Learn more: [Link](https://www.typescriptlang.org/docs/handbook/type-checking-ja
 
 ![img2](https://pbs.twimg.com/media/EN-6ARpUcAI41Md?format=jpg&name=small)  
 
+## Easily trace execution time of Promises
+
+Easily trace execution time of Promises with a combo of `await` & `finally`
+
+```js
+const delay = require("delay");
+
+trace("How long?", async () => {
+  await delay(500);
+});
+
+// Adapted from https://github.com/apollographql/apollo-server/blob/d5015f4ea00cadb2a74b09956344e6f65c084629/packages/apollo-datasource-rest/src/RESTDataSource.ts#L281
+async function trace(label, fn) {
+  if (process && process.env && process.env.NODE_ENV === "development") {
+    const startTime = Date.now();
+    try {
+      return await fn();
+    } finally {
+      const duration = Date.now() - startTime;
+      console.log(`${label} (${duration}ms)`);
+    }
+  } else {
+    return fn();
+  }
+}
+```
+
 ## Next Tip
 
 Coming soon...

@@ -12,6 +12,7 @@ Useful JavaScript Tips &amp; Tricks
 - [Conditionally Spread Object](#conditionally-spread-object).
 - [Conditionally adding properties inside Object](#Conditionally-adding-properties-inside-object).
 - [Type Checking JavaScript Files](#Type-checking-javaScript-files)
+- [Easily trace execution time of Promises](#easily-trace-execution-time-of-promises)
 
 <br>
 

@@ -46,6 +46,7 @@ which now you can easily scroll and check for object key value that you have bee
 MDN Web Docs: [Console.table()](https://developer.mozilla.org/en-US/docs/Web/API/Console/table)
 
 <br>
+**[⬆ back to top](#contents)**
 
 ## Console Log With Variable Name
 
@@ -74,6 +75,8 @@ and now in your browser console you will see something like:
 Now you can easily say that `completed` is indeed `true` here.
 
 Reference: [Wes Bos's 2016 Tweet](https://twitter.com/wesbos/status/798579690575462400)
+
+**[⬆ back to top](#contents)**
 
 ## Short Code To Create Array
 
@@ -115,6 +118,8 @@ If you want the array to start from `1` and end with `n` here like `[1, 2, 3, ..
 // Result => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
+**[⬆ back to top](#contents)**
+
 ## Conditionally Spread Object
 
 We can conditionally spread an object - because `{...false}` (and undefined/null/etc) is just `{}`.
@@ -144,6 +149,8 @@ const shipping = {
 
 // and we will not get any type error incase person object has not been set yet
 ```
+
+**[⬆ back to top](#contents)**
 
 ## Conditionally adding properties inside Object
 
@@ -180,6 +187,8 @@ The spread operator for object does nothing if its operand is an empty object
 // {a: 1}
 ```
 
+**[⬆ back to top](#contents)**
+
 ## Type Checking JavaScript Files
 
 Want TypeScript's type checking for regular JavaScript?
@@ -192,6 +201,8 @@ If types can't be inferred, use JSDoc annotations.
 Learn more: [Link](https://www.typescriptlang.org/docs/handbook/type-checking-javascript-files.html)  
 
 ![img2](https://pbs.twimg.com/media/EN-6ARpUcAI41Md?format=jpg&name=small)  
+
+**[⬆ back to top](#contents)**
 
 ## Easily trace execution time of Promises
 
@@ -219,6 +230,8 @@ async function trace(label, fn) {
   }
 }
 ```
+
+**[⬆ back to top](#contents)**
 
 # Check if an array with a length is not just empty slots
 
@@ -252,6 +265,8 @@ Array(undefined, undefined, 3, 5).length
 Array(undefined, undefined, 3, 5).filter(Boolean).length
 => 2
 ```
+
+**[⬆ back to top](#contents)**
 
 ## Next Tip
 

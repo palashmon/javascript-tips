@@ -46,6 +46,7 @@ which now you can easily scroll and check for object key value that you have bee
 MDN Web Docs: [Console.table()](https://developer.mozilla.org/en-US/docs/Web/API/Console/table)
 
 <br>
+
 **[⬆ back to top](#contents)**
 
 ## Console Log With Variable Name
